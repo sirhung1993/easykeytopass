@@ -27,7 +27,7 @@ module.exports = class Config {
 
       this.operationMode = process.env.OPERATION_MODE || 'DEV'
 
-      this.redisDB = process.env.REDIS_URL || 'link t o your REDIS'
+      this.redisDB = process.env.REDISCLOUD_URL || 'link t o your REDIS'
 
       this.encryptingSeed = function(userPassword) {
         return md5(md5(userPassword + this.passwordKey))
